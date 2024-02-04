@@ -1,0 +1,27 @@
+.Abouts {
+  background-color: var(--second-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 85vh;
+}
+
+.Abouts .info {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  color: white;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.emp {
+  background-color: var(--second-color);
+}
+
+@media (max-width: 767px) {
+  .Abouts .info {
+    text-align: center;
+  }
+}

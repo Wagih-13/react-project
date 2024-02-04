@@ -1,0 +1,100 @@
+.portfolio {
+  background-color: white;
+  padding: 100px 0px;
+  position: relative;
+}
+
+.portfolio .slider {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.portfolio .slider picture {
+  width: 50%;
+  overflow: hidden;
+}
+.portfolio .slider picture img {
+  width: 100%;
+}
+
+.titleContain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.portfolio .title {
+  color: black;
+  text-align: center;
+  position: relative;
+}
+
+.portfolio .title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 130%;
+  left: 0px;
+  height: 3px;
+  background-color: black;
+}
+
+.portfolio .title i {
+  background-color: white;
+}
+
+.gallary {
+  margin: 80px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio .gallary .card {
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio .gallary .card img {
+  width: 100%;
+}
+
+.portfolio .gallary .card .Lay {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: var(--second-color);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s;
+}
+
+.portfolio .gallary .card .Lay i {
+  font-size: 100px;
+  color: white;
+}
+.portfolio .gallary .card:hover .Lay {
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .portfolio .slider picture {
+    width: 90%;
+  }
+}
